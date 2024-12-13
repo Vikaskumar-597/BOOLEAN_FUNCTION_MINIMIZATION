@@ -35,31 +35,29 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 ```
-module exp2(f_and,f_or,f_nor,f_not,f_nand,f_xor,f_xnor,a,b);
-input a,b;
-output f_and,f_or,f_nor,f_not,f_nand,f_xor,f_xnor;
-and (f_and,a,b);
-or (f_or,a,b);
-not (f_not,a);
-nor (f_nor,a,b);
-nand (f_nand,a,b);
-xor (f_xor,a,b);
-xnor (f_xnor,a,b);
+module exp3(a,b,c,d,f1,w,x,y,z,f2);
+input a,b,c,d,w,x,y,z;
+output f1,f2;
+assign f1=((~b&~d)|(~a&b&d)|(a&b&~c));
+assign f2=((~y&z)|(x&y)|(w&y));
 endmodule
 ```
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
 Developed by  : Vikaskumar M
-   RegisterNumber: 24900247
+
+RegisterNumber: 24900247
 
 
 **RTL realization**
-![exp2](https://github.com/user-attachments/assets/24dcf3b7-1ccf-4e26-82a4-0aa190ae8151)
+
+![exp3](https://github.com/user-attachments/assets/76aad4c5-eb40-4451-8691-ec6efa2049fd)
 
 
 **Timing Diagram**
-![Screenshot 2024-10-20 180355](https://github.com/user-attachments/assets/d2913aac-ae78-477d-a840-8b6987d68521)
+
+![Screenshot 2024-10-22 113210](https://github.com/user-attachments/assets/d45afeef-d4b0-4134-b127-d6f5141a5ac7)
 
 
 **Result:**
